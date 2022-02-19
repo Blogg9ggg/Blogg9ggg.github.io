@@ -6,7 +6,7 @@
   <link href="https://blogg9ggg.github.io/atom.xml" rel="self"/>
   
   <link href="https://blogg9ggg.github.io/"/>
-  <updated>2022-01-25T05:00:30.735Z</updated>
+  <updated>2022-02-19T08:19:12.046Z</updated>
   <id>https://blogg9ggg.github.io/</id>
   
   <author>
@@ -15,6 +15,107 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DiceCTF 2022</title>
+    <link href="https://blogg9ggg.github.io/2022/02/19/dicectf-2022/"/>
+    <id>https://blogg9ggg.github.io/2022/02/19/dicectf-2022/</id>
+    <published>2022-02-19T06:55:06.000Z</published>
+    <updated>2022-02-19T08:19:12.046Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;DiceCTF-2022&quot;&gt;&lt;a href=&quot;#DiceCTF-2022&quot; class=&quot;headerlink&quot; title=&quot;DiceCTF 2022&quot;&gt;&lt;/a&gt;DiceCTF 2022&lt;/h1&gt;&lt;h2 id=&quot;PWN&quot;&gt;&lt;a href=&quot;#PWN&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CTF" scheme="https://blogg9ggg.github.io/categories/CTF/"/>
+    
+    
+    <category term="比赛" scheme="https://blogg9ggg.github.io/tags/%E6%AF%94%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>seethefile</title>
+    <link href="https://blogg9ggg.github.io/2022/02/03/seethefile/"/>
+    <id>https://blogg9ggg.github.io/2022/02/03/seethefile/</id>
+    <published>2022-02-03T13:52:55.000Z</published>
+    <updated>2022-02-03T16:07:22.014Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;seethefile&quot;&gt;&lt;a href=&quot;#seethefile&quot; class=&quot;headerlink&quot; title=&quot;seethefile&quot;&gt;&lt;/a&gt;seethefile&lt;/h1&gt;&lt;h2 id=&quot;基本信息&quot;&gt;&lt;a href=&quot;#基本信息&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CTF" scheme="https://blogg9ggg.github.io/categories/CTF/"/>
+    
+    
+    <category term="pwnable.tw" scheme="https://blogg9ggg.github.io/tags/pwnable-tw/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言学习笔记</title>
+    <link href="https://blogg9ggg.github.io/2022/01/27/c-yu-yan-xue-xi-bi-ji/"/>
+    <id>https://blogg9ggg.github.io/2022/01/27/c-yu-yan-xue-xi-bi-ji/</id>
+    <published>2022-01-27T14:12:40.000Z</published>
+    <updated>2022-02-19T08:20:45.638Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C语言学习笔记&quot;&gt;&lt;a href=&quot;#C语言学习笔记&quot; class=&quot;headerlink&quot; title=&quot;C语言学习笔记&quot;&gt;&lt;/a&gt;C语言学习笔记&lt;/h1&gt;&lt;h2 id=&quot;define&quot;&gt;&lt;a href=&quot;#define&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="草稿" scheme="https://blogg9ggg.github.io/categories/%E8%8D%89%E7%A8%BF/"/>
+    
+    
+    <category term="草稿" scheme="https://blogg9ggg.github.io/tags/%E8%8D%89%E7%A8%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cJSON学习笔记</title>
+    <link href="https://blogg9ggg.github.io/2022/01/27/cjson-xue-xi-bi-ji/"/>
+    <id>https://blogg9ggg.github.io/2022/01/27/cjson-xue-xi-bi-ji/</id>
+    <published>2022-01-27T13:58:04.000Z</published>
+    <updated>2022-02-19T08:20:52.320Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;cJSON学习笔记&quot;&gt;&lt;a href=&quot;#cJSON学习笔记&quot; class=&quot;headerlink&quot; title=&quot;cJSON学习笔记&quot;&gt;&lt;/a&gt;cJSON学习笔记&lt;/h1&gt;&lt;p&gt;cJSON 总共有以下 8 种数据类型：&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="草稿" scheme="https://blogg9ggg.github.io/categories/%E8%8D%89%E7%A8%BF/"/>
+    
+    
+    <category term="草稿" scheme="https://blogg9ggg.github.io/tags/%E8%8D%89%E7%A8%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2018-1160</title>
@@ -46,7 +147,7 @@
     <link href="https://blogg9ggg.github.io/2022/01/12/hxpctf-2021/"/>
     <id>https://blogg9ggg.github.io/2022/01/12/hxpctf-2021/</id>
     <published>2022-01-12T15:55:44.000Z</published>
-    <updated>2022-01-16T08:12:41.666Z</updated>
+    <updated>2022-02-19T08:22:17.822Z</updated>
     
     
       
@@ -59,6 +160,10 @@
     
     
     
+    <category term="草稿" scheme="https://blogg9ggg.github.io/categories/%E8%8D%89%E7%A8%BF/"/>
+    
+    
+    <category term="草稿" scheme="https://blogg9ggg.github.io/tags/%E8%8D%89%E7%A8%BF/"/>
     
   </entry>
   
