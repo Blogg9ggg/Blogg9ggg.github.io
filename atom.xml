@@ -6,7 +6,7 @@
   <link href="https://blogg9ggg.github.io/atom.xml" rel="self"/>
   
   <link href="https://blogg9ggg.github.io/"/>
-  <updated>2022-02-20T11:37:59.015Z</updated>
+  <updated>2022-03-04T14:35:49.723Z</updated>
   <id>https://blogg9ggg.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CF1635D Infinite Set</title>
+    <link href="https://blogg9ggg.github.io/2022/03/04/cf1635d-infinite-set/"/>
+    <id>https://blogg9ggg.github.io/2022/03/04/cf1635d-infinite-set/</id>
+    <published>2022-03-04T13:42:19.000Z</published>
+    <updated>2022-03-04T14:35:49.723Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CF1635D-Infinite-Set&quot;&gt;&lt;a href=&quot;#CF1635D-Infinite-Set&quot; class=&quot;headerlink&quot; title=&quot;CF1635D Infinite Set&quot;&gt;&lt;/a&gt;CF1635D Infinite</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://blogg9ggg.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="DP" scheme="https://blogg9ggg.github.io/tags/DP/"/>
+    
+  </entry>
   
   <entry>
     <title>TQLCTF 2022</title>
@@ -71,7 +96,7 @@
     <link href="https://blogg9ggg.github.io/2022/02/03/seethefile/"/>
     <id>https://blogg9ggg.github.io/2022/02/03/seethefile/</id>
     <published>2022-02-03T13:52:55.000Z</published>
-    <updated>2022-02-03T16:07:22.014Z</updated>
+    <updated>2022-03-04T14:35:31.117Z</updated>
     
     
       
@@ -96,7 +121,7 @@
     <link href="https://blogg9ggg.github.io/2022/01/27/c-yu-yan-xue-xi-bi-ji/"/>
     <id>https://blogg9ggg.github.io/2022/01/27/c-yu-yan-xue-xi-bi-ji/</id>
     <published>2022-01-27T14:12:40.000Z</published>
-    <updated>2022-02-23T10:55:12.765Z</updated>
+    <updated>2022-03-04T13:40:56.415Z</updated>
     
     
       

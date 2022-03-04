@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Komorebi">
-    <meta name="description" content="">
+    <meta name="description" content="Success is not final, failure is not fatal, it is the courage to continue that counts.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -109,17 +109,6 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
     <a href="/friends" class="waves-effect waves-light">
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
@@ -146,7 +135,7 @@
         <div class="logo-name">Komorebi</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            Success is not final, failure is not fatal, it is the courage to continue that counts.
             
         </div>
     </div>
@@ -206,17 +195,6 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
 		</a>
           
         </li>
@@ -315,9 +293,9 @@
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
-                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
-                        startDelay: 300,
-                        typeSpeed: 100,
+                        strings: ['Success is not final, failure is not fatal, it is the courage to continue that counts.','成功不是终点，失败也非末日，最重要的是继续前进的勇气。'],
+                        startDelay: 100,
+                        typeSpeed: 50,
                         loop: true,
                         backSpeed: 50,
                         showCursor: true
@@ -462,11 +440,7 @@
                             <div class="title center-align">seethefile</div>
                             <div class="description center-align">
                                 
-                                    seethefile基本信息Glibc:    2.23
-Arch:     i386-32-little
-RELRO:    Partial RELRO
-Stack:    No canary found
-NX:       NX ena
+                                    seethefile.
                                 
                             </div>
                             <div class="cover-btns">
@@ -494,6 +468,29 @@ NX:       NX ena
                             </div>
                             <div class="cover-btns">
                                 <a href="/2022/02/20/tqlctf-2022/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/20.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">CF1635D Infinite Set</div>
+                            <div class="description center-align">
+                                
+                                    计数题。
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2022/03/04/cf1635d-infinite-set/" class="waves-effect waves-light btn"
                                    target="_blank">
                                     <i class="icon fa fa-eye fa-fw"></i>阅读更多
                                 </a>
@@ -538,19 +535,8 @@ NX:       NX ena
 
         let carouselIntervalId;
         
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
 
         function restartPlay() {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
             
         };
 
@@ -581,12 +567,12 @@ NX:       NX ena
                         <div class="dream">
     
     <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;Tips
     </div>
     
     <div class="row">
         <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+            这些年我一直提醒自己一件事情，千万不要自己感动自己。大部分人看似的努力，不过是愚蠢导致的。什么熬夜看书到天亮，连续几天只睡几小时，多久没放假了，如果这些东西也值得夸耀，那么富士康流水线上任何一个人都比你努力多了。人难免天生有自怜的情绪，唯有时刻保持清醒，才能看清真正的价值在哪里。（佚名）
         </div>
     </div>
 </div>
@@ -616,6 +602,53 @@ NX:       NX ena
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/03/04/cf1635d-infinite-set/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="CF1635D Infinite Set">
+                            
+                            <span class="card-title">CF1635D Infinite Set</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                计数题。
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-04
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/DP/">
+                            <span class="chip bg-color">DP</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
@@ -726,11 +759,7 @@ NX:       NX ena
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                seethefile基本信息Glibc:    2.23
-Arch:     i386-32-little
-RELRO:    Partial RELRO
-Stack:    No canary found
-NX:       NX ena
+                                seethefile.
                             
                         </div>
                         <div class="publish-info">

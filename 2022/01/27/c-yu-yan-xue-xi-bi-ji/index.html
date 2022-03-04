@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="C/C++学习笔记, Komorebi">
-    <meta name="description" content="">
+    <meta name="description" content="Success is not final, failure is not fatal, it is the courage to continue that counts.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -109,17 +109,6 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
     <a href="/friends" class="waves-effect waves-light">
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
@@ -146,7 +135,7 @@
         <div class="logo-name">Komorebi</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            Success is not final, failure is not fatal, it is the courage to continue that counts.
             
         </div>
     </div>
@@ -206,17 +195,6 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
 		</a>
           
         </li>
@@ -464,7 +442,33 @@
 <h1 id="C-学习笔记"><a href="#C-学习笔记" class="headerlink" title="C++学习笔记"></a>C++学习笔记</h1><h2 id="explicit"><a href="#explicit" class="headerlink" title="explicit"></a>explicit</h2><p><code>explicit</code>关键字只需用于类内的单参数构造函数前。由于无参数的构造函数和多参数的构造函数总是显式调用，这种情况在构造函数前加 <code>explicit</code>无意义。</p>
 <p>google的c++规范中提到：<code>explicit</code>的优点是可以避免不合时宜的类型变换，缺点无。所以google约定所有单参数的构造函数都必须是显式的，只有极少数情况下拷贝构造函数可以不声明成 <code>explicit</code>，例如作为其他类的透明包装器的类。<br>effective c++中说：被声明为explicit的构造函数通常比其non-explicit兄弟更受欢迎。因为它们禁止编译器执行非预期（往往也不被期望）的类型转换。除非我有一个好理由允许构造函数被用于隐式类型转换，否则我会把它声明为explicit，鼓励大家遵循相同的政策。</p>
 <h2 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/cpp-enum-intro.html">enum</a></p>
+<h2 id="常量字符串"><a href="#常量字符串" class="headerlink" title="常量字符串"></a>常量字符串</h2><p>在C语言中，常量的 <code>char*-based</code> 字符串为：<code>const char* const tmp = &quot;blogg9ggg&quot;;</code></p>
+<p>在C++中，定义成 <code>string</code> 往往更好：<code>const std::string tmp(&quot;blogg9ggg&quot;);</code></p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">char</span> s<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"test"</span><span class="token punctuation">;</span>
+<span class="token keyword">char</span> <span class="token operator">*</span>p <span class="token operator">=</span> s<span class="token punctuation">;</span>			<span class="token comment">// 普通指针</span>
+<span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> p <span class="token operator">=</span> s<span class="token punctuation">;</span>		<span class="token comment">// non-const pointer, const data</span>
+<span class="token keyword">char</span><span class="token operator">*</span> <span class="token keyword">const</span> p <span class="token operator">=</span> s<span class="token punctuation">;</span>		<span class="token comment">// const pointer, non-const data</span>
+<span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> <span class="token keyword">const</span> p <span class="token operator">=</span> s<span class="token punctuation">;</span>	<span class="token comment">// const pointer, const data</span>
+<span class="token comment">// 如果 const 出现在 * 左边，代表被指物是常量；</span>
+<span class="token comment">// 如果 const 出现在 * 右边，代表指针是常量；</span>
+<span class="token comment">// 如果出现在 * 两边，代表都是常量。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p>copy构造函数被用来“以同类型对象初始化自我对象”，copy assignment操作符被用来“从另一个同类型对象中拷贝其值到</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Widget</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+	<span class="token function">Widget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment">//default构造函数</span>
+	<span class="token function">Widget</span><span class="token punctuation">(</span><span class="token keyword">const</span> Widget<span class="token operator">&amp;</span> rhs<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//copy构造函数</span>
+	Widget<span class="token operator">&amp;</span> <span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">const</span> Widget<span class="token operator">&amp;</span> rhs<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//copy assignment操作符</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+Widget w1<span class="token punctuation">;</span>	<span class="token comment">//调用default构造函数</span>
+Widget <span class="token function">w2</span><span class="token punctuation">(</span>w1<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//调用copy构造函数</span>
+w1 <span class="token operator">=</span> w2<span class="token punctuation">;</span>	<span class="token comment">//调用copy assignment操作符</span>
+Widget w3 <span class="token operator">=</span> w2<span class="token punctuation">;</span>	<span class="token comment">//调用copy构造函数！</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="博客-1"><a href="#博客-1" class="headerlink" title="博客"></a>博客</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/cplusplus/cpp-namespaces.html">namespace</a></p>
+<p><a target="_blank" rel="noopener" href="http://c.biancheng.net/cpp/biancheng/view/3297.html">四种类型转换运算符：static_cast、dynamic_cast、const_cast和reinterpret_cast</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/cpp-virtual-functions.html">C++ 虚函数和纯虚函数的区别</a></p>
 
                 
             </div>
@@ -590,7 +594,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            seethefile.
                         
                     </div>
                     <div class="publish-info">
