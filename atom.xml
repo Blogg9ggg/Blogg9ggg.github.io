@@ -6,7 +6,7 @@
   <link href="https://blogg9ggg.github.io/atom.xml" rel="self"/>
   
   <link href="https://blogg9ggg.github.io/"/>
-  <updated>2022-03-29T09:58:42.085Z</updated>
+  <updated>2022-09-08T09:30:10.441Z</updated>
   <id>https://blogg9ggg.github.io/</id>
   
   <author>
@@ -15,6 +15,83 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CF1721D Maximum AND</title>
+    <link href="https://blogg9ggg.github.io/2022/09/08/cf1721d-maximum-and/"/>
+    <id>https://blogg9ggg.github.io/2022/09/08/cf1721d-maximum-and/</id>
+    <published>2022-09-08T09:15:52.000Z</published>
+    <updated>2022-09-08T09:30:10.441Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CF1706D-Maximum-AND&quot;&gt;&lt;a href=&quot;#CF1706D-Maximum-AND&quot; class=&quot;headerlink&quot; title=&quot;CF1706D Maximum AND&quot;&gt;&lt;/a&gt;CF1706D Maximum</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://blogg9ggg.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="暴力" scheme="https://blogg9ggg.github.io/tags/%E6%9A%B4%E5%8A%9B/"/>
+    
+    <category term="贪心" scheme="https://blogg9ggg.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CF1706D Chopping Carrots</title>
+    <link href="https://blogg9ggg.github.io/2022/07/22/cf1706d-chopping-carrots/"/>
+    <id>https://blogg9ggg.github.io/2022/07/22/cf1706d-chopping-carrots/</id>
+    <published>2022-07-22T14:34:41.000Z</published>
+    <updated>2022-07-22T18:36:15.118Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CF1706D-Chopping-Carrots&quot;&gt;&lt;a href=&quot;#CF1706D-Chopping-Carrots&quot; class=&quot;headerlink&quot; title=&quot;CF1706D Chopping Carrots&quot;&gt;&lt;/a&gt;CF1706D</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://blogg9ggg.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="数学" scheme="https://blogg9ggg.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CF1656E Equal Tree Sums</title>
+    <link href="https://blogg9ggg.github.io/2022/04/07/cf1656e-equal-tree-sums/"/>
+    <id>https://blogg9ggg.github.io/2022/04/07/cf1656e-equal-tree-sums/</id>
+    <published>2022-04-07T07:28:05.000Z</published>
+    <updated>2022-04-07T08:11:10.856Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CF1656E-Equal-Tree-Sums&quot;&gt;&lt;a href=&quot;#CF1656E-Equal-Tree-Sums&quot; class=&quot;headerlink&quot; title=&quot;CF1656E Equal Tree Sums&quot;&gt;&lt;/a&gt;CF1656E Equal</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://blogg9ggg.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="图论" scheme="https://blogg9ggg.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>CF1656D K-good</title>
