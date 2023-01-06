@@ -223,6 +223,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = 'b9708ac19936a3a2bb96b905971d07f6e95597f047850ce46121988bc3622dda';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -359,8 +372,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%8D%89%E7%A8%BF/" class="post-category">
-                                草稿
+                            <a href="/categories/%E7%B2%97%E7%B3%99%E7%AC%94%E8%AE%B0/" class="post-category">
+                                粗糙笔记
                             </a>
                         
                     </div>
@@ -870,7 +883,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021-2022</span>
+                <span id="year">2021-2023</span>
             
             <span id="year">2021</span>
             <a href="/about" target="_blank">李立基</a>
