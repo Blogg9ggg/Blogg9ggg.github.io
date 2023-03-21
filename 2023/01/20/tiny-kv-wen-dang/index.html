@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C/C++学习笔记, Komorebi">
+    <meta name="keywords" content="Tiny-KV 文档, Komorebi">
     <meta name="description" content="Success is not final, failure is not fatal, it is the courage to continue that counts.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C/C++学习笔记 | Komorebi</title>
+    <title>Tiny-KV 文档 | Komorebi</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -239,12 +239,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C/C++学习笔记</h1>
+                    <h1 class="description center-align post-title">Tiny-KV 文档</h1>
                 </div>
             </div>
         </div>
@@ -369,15 +369,6 @@
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E7%B2%97%E7%B3%99%E7%AC%94%E8%AE%B0/" class="post-category">
-                                粗糙笔记
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
@@ -385,7 +376,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-27
+                    2023-01-20
                 </div>
                 
 
@@ -409,80 +400,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="C语言学习笔记"><a href="#C语言学习笔记" class="headerlink" title="C语言学习笔记"></a>C语言学习笔记</h1><h2 id="define"><a href="#define" class="headerlink" title="#define"></a><code>#define</code></h2><ul>
-<li><p>C语言中，可以用 <code>#define</code> 定义标识符。其特点是：定义的标识符不占内存，只是一个临时的符号，预编译后这个符号就不存在了。预编译又叫预处理。预编译不是编译，而是编译前的处理。这个操作是在正式编译之前由系统自动完成的。<code>#define</code> 和 <code>#include</code> 类似，凡是以“#”开头的均为预处理指令。（出处：<a target="_blank" rel="noopener" href="http://c.biancheng.net/view/187.html">C语言中文网</a>）</p>
-</li>
-<li><p><code>#define</code>的几种类型：</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/* 定义常量 */</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">A</span> <span class="token expression"><span class="token number">10</span></span></span>
-<span class="token comment">/* 定义表达式 */</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">MAX</span><span class="token expression"><span class="token punctuation">(</span>A<span class="token punctuation">,</span> B<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token punctuation">(</span>B<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token punctuation">(</span>A<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">(</span>B<span class="token punctuation">)</span><span class="token punctuation">)</span></span></span>
-<span class="token comment">/* 特殊符号 */</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">A</span><span class="token expression"><span class="token punctuation">(</span>x<span class="token punctuation">)</span> T_</span><span class="token punctuation">##</span><span class="token expression">x</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">B</span><span class="token expression"><span class="token punctuation">(</span>x<span class="token punctuation">)</span> #@x</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">C</span><span class="token expression"><span class="token punctuation">(</span>x<span class="token punctuation">)</span> #x</span></span>
-<span class="token comment">/*
-* 输入: A(a); 输出: T_a.
-* 输入: B(a); 输出: 'a'.
-* 输入: C(a); 输出: "a".
-*/</span>
-<span class="token comment">/* 分行 */</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">FUN</span><span class="token expression"><span class="token punctuation">(</span>A<span class="token punctuation">,</span>B<span class="token punctuation">,</span>C<span class="token punctuation">)</span> </span><span class="token punctuation">\</span>
-<span class="token expression"><span class="token keyword">void</span> A</span><span class="token punctuation">##</span><span class="token expression"><span class="token function">B</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></span><span class="token punctuation">\</span>
-    <span class="token expression">std<span class="token double-colon punctuation">::</span>cout<span class="token operator">&lt;&lt;</span>#C<span class="token operator">&lt;&lt;</span>std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span></span><span class="token punctuation">\</span>
-<span class="token expression"><span class="token punctuation">&#125;</span></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-</ul>
-<h2 id="extern-quot-C-quot"><a href="#extern-quot-C-quot" class="headerlink" title="extern &quot;C&quot;"></a><code>extern &quot;C&quot;</code></h2><ul>
-<li><p><code>extern &quot;C&quot;</code>的主要作用就是为了能够正确实现C++代码调用其他C语言代码。加上 <code>extern &quot;C&quot;</code>后，会指示编译器这部分代码按C语言的进行编译，而不是C++的。由于C++支持函数重载，因此编译器编译函数的过程中会将函数的参数类型也加到编译后的代码中，而不仅仅是函数名；但C语言并不支持函数重载，因此编译C语言代码的函数时不会带上函数的参数类型，一般只包括函数名。这是二者在编译时的主要区别。</p>
-</li>
-<li><p>例子：</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">__cplusplus</span></span>
-<span class="token keyword">extern</span> <span class="token string">"C"</span>
-<span class="token punctuation">&#123;</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
-
-<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">__cplusplus</span></span>
-<span class="token punctuation">&#125;</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-</ul>
-<h2 id="函数调用约定"><a href="#函数调用约定" class="headerlink" title="函数调用约定"></a>函数调用约定</h2><h3 id="stdcall"><a href="#stdcall" class="headerlink" title="__stdcall"></a><code>__stdcall</code></h3><p>被这个关键字修饰的函数，其参数都是从右向左通过堆栈传递的(__fastcall 的前面部分由ecx,edx传)， 函数调用在返回前要由被调用者清理堆栈。</p>
-<ul>
-<li>例子：<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> __stdcall <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-<h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/as7790719/article/details/80224916#:~:text=const%20int%20%2A%20a%3B%20%E8%A1%A8%E7%A4%BAa%E6%98%AF%E4%B8%80%E4%B8%AA%E6%8C%87%E9%92%88%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%BB%BB%E6%84%8F%E6%8C%87%E5%90%91int%E5%B8%B8%E9%87%8F%E6%88%96%E8%80%85int%E5%8F%98%E9%87%8F%EF%BC%8C%E5%AE%83%E6%80%BB%E6%98%AF%E6%8A%8A%E5%AE%83%E6%89%80%E6%8C%87%E5%90%91%E7%9A%84%E7%9B%AE%E6%A0%87%E5%BD%93%E4%BD%9C%E4%B8%80%E4%B8%AAint%E5%B8%B8%E9%87%8F%E3%80%82%20%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%86%99%E6%88%90int%20const,%2A%20a%3B%E5%90%AB%E4%B9%89%E7%9B%B8%E5%90%8C%E3%80%82%20int%20%2A%20const%20a%3B%20%E8%A1%A8%E7%A4%BA%E4%B8%80%E4%B8%AA%E6%98%AF%E4%B8%80%E4%B8%AA%E6%8C%87%E9%92%88%E5%B8%B8%E9%87%8F%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E7%9A%84%E6%97%B6%E5%80%99%E5%BF%85%E9%A1%BB%E5%9B%BA%E5%AE%9A%E6%8C%87%E5%90%91%E4%B8%80%E4%B8%AAINT%E5%8F%98%E9%87%8F%EF%BC%8C%E4%B9%8B%E5%90%8E%E5%B0%B1%E4%B8%8D%E8%83%BD%E5%86%8D%E6%8C%87%E5%90%91%E5%88%AB%E7%9A%84%E5%9C%B0%E6%96%B9%E4%BA%86%E3%80%82">const int a; int const a; const int *a; int * const a; int const * a const; 之间的区别</a></p>
-<h1 id="C-学习笔记"><a href="#C-学习笔记" class="headerlink" title="C++学习笔记"></a>C++学习笔记</h1><h2 id="explicit"><a href="#explicit" class="headerlink" title="explicit"></a>explicit</h2><p><code>explicit</code>关键字只需用于类内的单参数构造函数前。由于无参数的构造函数和多参数的构造函数总是显式调用，这种情况在构造函数前加 <code>explicit</code>无意义。</p>
-<p>google的c++规范中提到：<code>explicit</code>的优点是可以避免不合时宜的类型变换，缺点无。所以google约定所有单参数的构造函数都必须是显式的，只有极少数情况下拷贝构造函数可以不声明成 <code>explicit</code>，例如作为其他类的透明包装器的类。<br>effective c++中说：被声明为explicit的构造函数通常比其non-explicit兄弟更受欢迎。因为它们禁止编译器执行非预期（往往也不被期望）的类型转换。除非我有一个好理由允许构造函数被用于隐式类型转换，否则我会把它声明为explicit，鼓励大家遵循相同的政策。</p>
-<h2 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/cpp-enum-intro.html">enum</a></p>
-<h2 id="常量字符串"><a href="#常量字符串" class="headerlink" title="常量字符串"></a>常量字符串</h2><p>在C语言中，常量的 <code>char*-based</code> 字符串为：<code>const char* const tmp = &quot;blogg9ggg&quot;;</code></p>
-<p>在C++中，定义成 <code>string</code> 往往更好：<code>const std::string tmp(&quot;blogg9ggg&quot;);</code></p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">char</span> s<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"test"</span><span class="token punctuation">;</span>
-<span class="token keyword">char</span> <span class="token operator">*</span>p <span class="token operator">=</span> s<span class="token punctuation">;</span>			<span class="token comment">// 普通指针</span>
-<span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> p <span class="token operator">=</span> s<span class="token punctuation">;</span>		<span class="token comment">// non-const pointer, const data</span>
-<span class="token keyword">char</span><span class="token operator">*</span> <span class="token keyword">const</span> p <span class="token operator">=</span> s<span class="token punctuation">;</span>		<span class="token comment">// const pointer, non-const data</span>
-<span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> <span class="token keyword">const</span> p <span class="token operator">=</span> s<span class="token punctuation">;</span>	<span class="token comment">// const pointer, const data</span>
-<span class="token comment">// 如果 const 出现在 * 左边，代表被指物是常量；</span>
-<span class="token comment">// 如果 const 出现在 * 右边，代表指针是常量；</span>
-<span class="token comment">// 如果出现在 * 两边，代表都是常量。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p>copy构造函数被用来“以同类型对象初始化自我对象”，copy assignment操作符被用来“从另一个同类型对象中拷贝其值到</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Widget</span> <span class="token punctuation">&#123;</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-	<span class="token function">Widget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment">//default构造函数</span>
-	<span class="token function">Widget</span><span class="token punctuation">(</span><span class="token keyword">const</span> Widget<span class="token operator">&amp;</span> rhs<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//copy构造函数</span>
-	Widget<span class="token operator">&amp;</span> <span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">const</span> Widget<span class="token operator">&amp;</span> rhs<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//copy assignment操作符</span>
-	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-Widget w1<span class="token punctuation">;</span>	<span class="token comment">//调用default构造函数</span>
-Widget <span class="token function">w2</span><span class="token punctuation">(</span>w1<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//调用copy构造函数</span>
-w1 <span class="token operator">=</span> w2<span class="token punctuation">;</span>	<span class="token comment">//调用copy assignment操作符</span>
-Widget w3 <span class="token operator">=</span> w2<span class="token punctuation">;</span>	<span class="token comment">//调用copy构造函数！</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="博客-1"><a href="#博客-1" class="headerlink" title="博客"></a>博客</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/cplusplus/cpp-namespaces.html">namespace</a></p>
-<p><a target="_blank" rel="noopener" href="http://c.biancheng.net/cpp/biancheng/view/3297.html">四种类型转换运算符：static_cast、dynamic_cast、const_cast和reinterpret_cast</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/cpp-virtual-functions.html">C++ 虚函数和纯虚函数的区别</a></p>
-
+                <h1 id="未命名"><a href="#未命名" class="headerlink" title="未命名"></a>未命名</h1><h2 id="Lab-1"><a href="#Lab-1" class="headerlink" title="Lab 1"></a>Lab 1</h2><h4 id="column-family"><a href="#column-family" class="headerlink" title="column family"></a>column family</h4><p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Standard_column_family">wiki</a></p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/3245267/column-family-concept-and-data-model">stackoverflow</a></p>
+<h4 id="Implement-standalone-storage-engine"><a href="#Implement-standalone-storage-engine" class="headerlink" title="Implement standalone storage engine"></a>Implement standalone storage engine</h4><h4 id="Implement-service-handlers"><a href="#Implement-service-handlers" class="headerlink" title="Implement service handlers"></a>Implement service handlers</h4>
                 
             </div>
             <hr/>
@@ -508,7 +428,7 @@ Widget w3 <span class="token operator">=</span> w2<span class="token punctuation
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogg9ggg.github.io/2022/01/27/c-yu-yan-xue-xi-bi-ji/">https://blogg9ggg.github.io/2022/01/27/c-yu-yan-xue-xi-bi-ji/</a>
+                    <a href="https://blogg9ggg.github.io/2023/01/20/tiny-kv-wen-dang/">https://blogg9ggg.github.io/2023/01/20/tiny-kv-wen-dang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -595,31 +515,31 @@ Widget w3 <span class="token operator">=</span> w2<span class="token punctuation
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/02/03/seethefile/">
+                <a href="/2023/03/21/abc294f-sugar-water-2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="seethefile">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="ABC294F Sugar Water 2">
                         
-                        <span class="card-title">seethefile</span>
+                        <span class="card-title">ABC294F Sugar Water 2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            seethefile.
+                            一种二分算法。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-21
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/CTF/" class="post-category">
-                                    CTF
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -629,8 +549,8 @@ Widget w3 <span class="token operator">=</span> w2<span class="token punctuation
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/pwnable-tw/">
-                        <span class="chip bg-color">pwnable.tw</span>
+                    <a href="/tags/%E4%BA%8C%E5%88%86/">
+                        <span class="chip bg-color">二分</span>
                     </a>
                     
                 </div>
@@ -644,13 +564,13 @@ Widget w3 <span class="token operator">=</span> w2<span class="token punctuation
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/27/cjson-xue-xi-bi-ji/">
+                <a href="/2023/01/06/etcd-yuan-ma-yue-du-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="cJSON学习笔记">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="etcd源码阅读笔记">
                         
-                        <span class="card-title">cJSON学习笔记</span>
+                        <span class="card-title">etcd源码阅读笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -661,7 +581,7 @@ Widget w3 <span class="token operator">=</span> w2<span class="token punctuation
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-06
                             </span>
                         <span class="publish-author">
                             
@@ -678,8 +598,8 @@ Widget w3 <span class="token operator">=</span> w2<span class="token punctuation
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%8D%89%E7%A8%BF/">
-                        <span class="chip bg-color">草稿</span>
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
                     </a>
                     
                 </div>

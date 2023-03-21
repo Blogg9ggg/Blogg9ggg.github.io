@@ -6,7 +6,7 @@
   <link href="https://blogg9ggg.github.io/atom.xml" rel="self"/>
   
   <link href="https://blogg9ggg.github.io/"/>
-  <updated>2023-01-06T12:45:45.000Z</updated>
+  <updated>2023-03-21T15:06:30.622Z</updated>
   <id>https://blogg9ggg.github.io/</id>
   
   <author>
@@ -17,15 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ABC294F Sugar Water 2</title>
+    <link href="https://blogg9ggg.github.io/2023/03/21/abc294f-sugar-water-2/"/>
+    <id>https://blogg9ggg.github.io/2023/03/21/abc294f-sugar-water-2/</id>
+    <published>2023-03-21T13:20:03.000Z</published>
+    <updated>2023-03-21T15:06:30.622Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ABC294F-Sugar-Water-2&quot;&gt;&lt;a href=&quot;#ABC294F-Sugar-Water-2&quot; class=&quot;headerlink&quot; title=&quot;ABC294F Sugar Water 2&quot;&gt;&lt;/a&gt;ABC294F Sugar Water</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://blogg9ggg.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="二分" scheme="https://blogg9ggg.github.io/tags/%E4%BA%8C%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tiny-KV 文档</title>
+    <link href="https://blogg9ggg.github.io/2023/01/20/tiny-kv-wen-dang/"/>
+    <id>https://blogg9ggg.github.io/2023/01/20/tiny-kv-wen-dang/</id>
+    <published>2023-01-20T13:58:11.000Z</published>
+    <updated>2023-01-20T14:45:44.603Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;未命名&quot;&gt;&lt;a href=&quot;#未命名&quot; class=&quot;headerlink&quot; title=&quot;未命名&quot;&gt;&lt;/a&gt;未命名&lt;/h1&gt;&lt;h2 id=&quot;Lab-1&quot;&gt;&lt;a href=&quot;#Lab-1&quot; class=&quot;headerlink&quot; title=&quot;Lab</summary>
+        
+      
+    
+    
+    
+    
+    <category term="笔记" scheme="https://blogg9ggg.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>etcd源码阅读笔记</title>
     <link href="https://blogg9ggg.github.io/2023/01/06/etcd-yuan-ma-yue-du-bi-ji/"/>
     <id>https://blogg9ggg.github.io/2023/01/06/etcd-yuan-ma-yue-du-bi-ji/</id>
     <published>2023-01-06T12:45:44.000Z</published>
-    <updated>2023-01-06T12:45:45.000Z</updated>
+    <updated>2023-01-06T13:27:51.365Z</updated>
     
     
     
     
+    <category term="粗糙笔记" scheme="https://blogg9ggg.github.io/categories/%E7%B2%97%E7%B3%99%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="笔记" scheme="https://blogg9ggg.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -286,7 +338,7 @@
     <link href="https://blogg9ggg.github.io/2022/01/27/c-yu-yan-xue-xi-bi-ji/"/>
     <id>https://blogg9ggg.github.io/2022/01/27/c-yu-yan-xue-xi-bi-ji/</id>
     <published>2022-01-27T14:12:40.000Z</published>
-    <updated>2022-03-04T13:40:56.415Z</updated>
+    <updated>2023-01-06T13:20:46.439Z</updated>
     
     
       
@@ -299,10 +351,10 @@
     
     
     
-    <category term="草稿" scheme="https://blogg9ggg.github.io/categories/%E8%8D%89%E7%A8%BF/"/>
+    <category term="粗糙笔记" scheme="https://blogg9ggg.github.io/categories/%E7%B2%97%E7%B3%99%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="草稿" scheme="https://blogg9ggg.github.io/tags/%E8%8D%89%E7%A8%BF/"/>
+    <category term="笔记" scheme="https://blogg9ggg.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   

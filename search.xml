@@ -4,6 +4,50 @@
   
     
     <entry>
+      <title>ABC294F Sugar Water 2</title>
+      <link href="/2023/03/21/abc294f-sugar-water-2/"/>
+      <url>/2023/03/21/abc294f-sugar-water-2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="ABC294F-Sugar-Water-2"><a href="#ABC294F-Sugar-Water-2" class="headerlink" title="ABC294F Sugar Water 2"></a>ABC294F Sugar Water 2</h1><p><a href="https://atcoder.jp/contests/abc294/tasks/abc294_f">题目链接</a></p><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>$\frac{100x}{x+y}$是糖的浓度的百分比值，讨论时只考虑$\frac{x}{x+y}$即可，后面再去乘100，待求解的问题本质上就是求$NM$个组合的浓度中第K大。</p><p>直接二分最终的浓度，找到最小的浓度，满足“刚好有K个大于等于该浓度的组合”。</p><p>对于一个二分到的浓度$T$，Takahashi的第$i$杯糖水中有$S_i$克糖和$W_i$克水，如果只要求浓度为$T$，那么他还富余了$(S_i-\frac{T}{1-T}\times W_i)$克糖（推理过程如下），富余的糖就可以给Aoki的糖水使用。<br>$$<br>设有W_i克水，需要x克糖才能使得糖水的浓度为T，则有\<br>T=\frac{x}{x+W_i}\rightarrow \frac{1}{T}=1+\frac{W_i}{x}\rightarrow x=W_i \frac{T}{1-T}\<br>很容易即可推出出Takahashi盈余的糖分为\<br>S_i-W_i \frac{T}{1-T}<br>$$<br>如此，我们得到了一个在$O(nlog\ n)$时间复杂度内计算有多少个大于等于浓度T的组合的方法：</p><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">vector&lt;double&gt; eSuger(N);double tmp &#x3D; T &#x2F; (1 - T);&#x2F;&#x2F; 对于二分到的浓度T，计算将Takahashi的每杯糖水盈余的糖分，保存到vector中for (int i &#x3D; 0; i &lt; N; i++) &#123;    eSuger[i] &#x3D; (double) Ta[i].suger - tmp * Ta[i].water;&#125;&#x2F;&#x2F; 从小到大排序，方便后面用lower_bound函数sort(eSuger.begin(), eSuger.end());LL cnt &#x3D; 0;&#x2F;&#x2F; 枚举Aoki的每杯糖水for (int i &#x3D; 0; i &lt; M; i++) &#123;    &#x2F;&#x2F; 计算这杯糖水需要多少糖分才能使其浓度为T    double nSuger &#x3D; tmp * Ao[i].water - Ao[i].suger;    &#x2F;&#x2F; Takahashi有多少杯糖水可以满足Aoki的这杯糖水所需的糖分&#x2F;&#x2F; 把所有的糖水加起来就是满足“浓度大于等于T”的组合数    cnt +&#x3D; N-(lower_bound(eSuger.begin(),eSuger.end(),nSuger)-eSuger.begin());&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include &lt;bits&#x2F;stdc++.h&gt;using namespace std;using LL &#x3D; long long;struct juice &#123;    int suger, water;    juice(int s &#x3D; 0, int w &#x3D; 0) : suger(s), water(w) &#123;&#125;&#125;;int main() &#123;&#x2F;&#x2F;    freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);&#x2F;&#x2F;    freopen(&quot;out.txt&quot;,&quot;w&quot;,stdout);    int N, M;    LL K;    cin &gt;&gt; N &gt;&gt; M &gt;&gt; K;    int a, b;    vector&lt;juice&gt; Ta, Ao;    for (int i &#x3D; 0; i &lt; N; i++) &#123;        cin &gt;&gt; a &gt;&gt; b;        Ta.push_back(juice(a, b));    &#125;    for (int i &#x3D; 0; i &lt; M; i++) &#123;        cin &gt;&gt; a &gt;&gt; b;        Ao.push_back(juice(a, b));    &#125;    double l &#x3D; 0, r &#x3D; 1;    int t &#x3D; 100;    vector&lt;double&gt; eSuger(N);    while (t--) &#123;        double C &#x3D; (l + r) &#x2F; 2;        double tmp &#x3D; C &#x2F; (1 - C);        for (int i &#x3D; 0; i &lt; N; i++) &#123;            eSuger[i] &#x3D; (double) Ta[i].suger - tmp * Ta[i].water;        &#125;        sort(eSuger.begin(), eSuger.end());        LL cnt &#x3D; 0;        for (int i &#x3D; 0; i &lt; M; i++) &#123;            double nSuger &#x3D; tmp * Ao[i].water - Ao[i].suger;            cnt +&#x3D; N - (lower_bound(eSuger.begin(), eSuger.end(), nSuger) - eSuger.begin());        &#125;        &#x2F;&#x2F; 看题解学到的新写法        (cnt &lt; K ? r : l) &#x3D; C;    &#125;    cout &lt;&lt; fixed &lt;&lt; setprecision(16) &lt;&lt; l * 100 &lt;&lt; endl;    return 0;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 二分 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tiny-KV 文档</title>
+      <link href="/2023/01/20/tiny-kv-wen-dang/"/>
+      <url>/2023/01/20/tiny-kv-wen-dang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="未命名"><a href="#未命名" class="headerlink" title="未命名"></a>未命名</h1><h2 id="Lab-1"><a href="#Lab-1" class="headerlink" title="Lab 1"></a>Lab 1</h2><h4 id="column-family"><a href="#column-family" class="headerlink" title="column family"></a>column family</h4><p><a href="https://en.wikipedia.org/wiki/Standard_column_family">wiki</a></p><p><a href="https://stackoverflow.com/questions/3245267/column-family-concept-and-data-model">stackoverflow</a></p><h4 id="Implement-standalone-storage-engine"><a href="#Implement-standalone-storage-engine" class="headerlink" title="Implement standalone storage engine"></a>Implement standalone storage engine</h4><h4 id="Implement-service-handlers"><a href="#Implement-service-handlers" class="headerlink" title="Implement service handlers"></a>Implement service handlers</h4>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>etcd源码阅读笔记</title>
       <link href="/2023/01/06/etcd-yuan-ma-yue-du-bi-ji/"/>
       <url>/2023/01/06/etcd-yuan-ma-yue-du-bi-ji/</url>
@@ -11,6 +55,18 @@
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> 粗糙笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -278,14 +334,14 @@
       
       <categories>
           
-          <category> 草稿 </category>
+          <category> 粗糙笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 草稿 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
